@@ -51,7 +51,7 @@ class DatabasePosts {
     }
     static conectar() {
         Mongoose
-            .connect('mongodb://localhost:27017/socialnetwork', {
+            .connect(process.env.MONGO_URL, {
                 useNewUrlParser: true
             })
         const connection = Mongoose.connection
